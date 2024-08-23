@@ -1,0 +1,36 @@
+device:
+    use_cuda: True
+    gpu_id: "1"
+
+data:
+    source_dataset_name: 'NASBENCH101'
+    target_dataset_name: 'DARTS'
+    all_101: False
+    source_101_dataset_num: 1000
+    target_dataset_num: 1000
+
+train:
+    seed: 2019
+    epoch: 20
+    train_batch_size: 1000
+    infer_batch_size: 100
+    lr: 0.001
+    loss_function: 'MSE'
+    weight_decay: 0.0005
+    trade_off: 1
+
+net:
+    bridge: 1
+    adnet_hidden_size: 256
+    embedding_len: 3
+    use_embed: True
+
+encoder:
+    inter_l: 64
+    feature_l: 50
+
+other:
+    print_num: 1
+    no_test: True
+    kl: 0
+
